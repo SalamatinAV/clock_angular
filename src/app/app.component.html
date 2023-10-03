@@ -1,0 +1,56 @@
+<div class="content-block">
+  <div class="content" (wheel)="alarmClockArrow($event)">
+    <div class="background">
+      <button
+        class="alarm-btn"
+        mat-raised-button
+        (click)="alarmActivation = !alarmActivation"
+      >
+        <mat-icon
+          class="icon-alarm"
+          [ngStyle]="{ color: alarmActivation ? 'green' : '#bb0000' }"
+          >alarm</mat-icon
+        >
+      </button>
+    </div>
+
+    <div class="clock-block">
+      <div
+        class="alarm-clock-arrow"
+        [ngStyle]="{ transform: 'rotate(' + alarm + 'deg)' }"
+      >
+        <mat-icon
+          class="alarm-clock"
+          [ngStyle]="{ color: alarmActivation ? '#125312' : '#bb0000' }"
+          >arrow_left
+        </mat-icon>
+      </div>
+
+      <div
+        class="hour-hand"
+        [ngStyle]="{ transform: 'rotate(' + hourHand + 'deg)' }"
+      ></div>
+
+      <div
+        class="minute-hand"
+        [ngStyle]="{ transform: 'rotate(' + minuteHand + 'deg)' }"
+      ></div>
+
+      <div
+        class="second-hand"
+        [ngStyle]="{ transform: 'rotate(' + secondHand + 'deg)' }"
+      ></div>
+
+      <div class="lid"></div>
+    </div>
+  </div>
+  <button
+    mat-fab
+    color="primary"
+    class="audio-control"
+    (click)="this.audioControlBtn = !this.audioControlBtn"
+  >
+    <mat-icon *ngIf="!audioControlBtn">volume_off</mat-icon>
+    <mat-icon *ngIf="audioControlBtn">volume_up</mat-icon>
+  </button>
+</div>

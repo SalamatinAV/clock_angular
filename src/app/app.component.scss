@@ -1,0 +1,163 @@
+.content-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  // background: url(https://png.pngtree.com/thumb_back/fw800/background/20201105/pngtree-brick-wall-background-image_451265.jpg);
+  background-image: url(../assets/img/background-img.jpg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  .content {
+    position: relative;
+    width: 900px;
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    // background: url(https://i0.wp.com/img-fotki.yandex.ru/get/5110/135296063.37/0_184e19_b1eb34b_orig.jpg?ssl=1);
+    background-image: url(../assets/img/clock-img.webp);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #2196f3;
+
+    .background {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(3, 3, 3, 0.616);
+
+      .alarm-btn {
+        position: absolute;
+        bottom: 300px;
+        background-color: #646464;
+        height: 60px;
+        width: 160px;
+        padding: 0;
+
+        .icon-alarm {
+          margin: 0;
+          font-size: 45px;
+          height: 50px;
+          width: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: 0.5s;
+        }
+      }
+    }
+
+    .clock-block {
+      display: flex;
+      position: relative;
+      width: 60px;
+      height: 60px;
+      background-color: black;
+      align-items: center;
+      border-radius: 50%;
+      transform: rotate(-90deg);
+
+      .hour-hand {
+        background-color: rgb(0, 0, 0);
+        position: absolute;
+        left: 30px;
+        width: 310px;
+        height: 30px;
+        transform-origin: left center;
+        border: 2px solid rgb(28 183 35);
+        box-sizing: border-box;
+        border-radius: 6px;
+      }
+
+      .minute-hand {
+        background-color: rgb(0, 0, 0);
+        position: absolute;
+        left: 30px;
+        width: 380px;
+        height: 18px;
+        transform-origin: left center;
+        border: 2px solid rgb(28 183 35);
+        box-sizing: border-box;
+        border-radius: 6px;
+      }
+
+      .second-hand {
+        background-color: rgb(247, 101, 4);
+        position: absolute;
+        left: 30px;
+        width: 405px;
+        height: 4px;
+        transform-origin: left center;
+        box-sizing: border-box;
+        border-radius: 6px;
+      }
+
+      .alarm-clock-arrow {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        position: absolute;
+        left: 30px;
+        width: 445px;
+        height: 1px;
+        transform-origin: left center;
+        box-sizing: border-box;
+        border-radius: 6px;
+
+        .alarm-clock {
+          display: flex;
+          margin: 0;
+          height: 60px;
+          width: 35px;
+          font-size: 130px;
+          transition: 0.5s;
+          -webkit-text-stroke: 1px yellow;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      .lid {
+        background-color: black;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        border-radius: 100%;
+        border: 5px solid #2196f3;
+        box-sizing: border-box;
+      }
+    }
+  }
+  .audio-control {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+  }
+}
+
+:host::ng-deep .btn.mdc-button .mdc-button__label {
+  position: relative;
+  font-size: 150px;
+}
+
+:host::ng-deep .mdc-fab {
+  height: 70px;
+  width: 70px;
+  .material-icons {
+    font-size: 45px;
+  }
+  .mat-icon {
+    height: 45px;
+    width: 45px;
+  }
+}
