@@ -19,14 +19,19 @@ export class AppComponent implements OnInit {
 
   audioAlarm: HTMLAudioElement = new Audio();
   audioHours: HTMLAudioElement = new Audio();
-  audioSeconds: HTMLAudioElement = new Audio();
+  audioSeconds: HTMLAudioElement = new Audio(
+    'https://github.com/SalamatinAV/clock_angular/blob/main/src/assets/audio/podnimayuschiysya-naverh-schelchok.mp3'
+  );
 
   data!: Date;
   ngOnInit(): void {
-    this.audioAlarm.src = '../assets/audio/bud.mp3';
+    //github.com/SalamatinAV/clock_angular/blob/gh-pages/assets/audio/podnimayuschiysya-naverh-schelchok.mp3
+
+    https: this.audioAlarm.src = '../assets/audio/bud.mp3';
     this.audioHours.src = '../assets/audio/probil-chas-v-nastennyih-chasah.mp3';
-    this.audioSeconds.src =
-      '../assets/audio/podnimayuschiysya-naverh-schelchok.mp3';
+    // this.audioSeconds.src =
+    //   '../assets/audio/podnimayuschiysya-naverh-schelchok.mp3';
+
     this.audioSeconds.volume = 0.5;
     this.clockStart();
   }
