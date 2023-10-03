@@ -17,8 +17,8 @@ export class AppComponent implements OnInit {
   savingAlarmValue!: number;
   alarmActivation: boolean = false;
 
-  audioAlarm: HTMLAudioElement = new Audio('../assets/audio/bud.mp3');
-  audioHours: HTMLAudioElement = new Audio('../assets/audio/hours.mp3');
+  audioAlarm: HTMLAudioElement = new Audio('./assets/audio/bud.mp3');
+  audioHours: HTMLAudioElement = new Audio('./assets/audio/hours.mp3');
   audioSeconds: HTMLAudioElement = new Audio('./assets/audio/second.mp3');
 
   data!: Date;
