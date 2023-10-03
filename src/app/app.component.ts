@@ -17,16 +17,12 @@ export class AppComponent implements OnInit {
   savingAlarmValue!: number;
   alarmActivation: boolean = false;
 
-  audioAlarm: HTMLAudioElement = new Audio();
-  audioHours: HTMLAudioElement = new Audio();
-  audioSeconds: HTMLAudioElement = new Audio();
+  audioAlarm: HTMLAudioElement = new Audio('../assets/audio/bud.mp3');
+  audioHours: HTMLAudioElement = new Audio('../assets/audio/hours.mp3');
+  audioSeconds: HTMLAudioElement = new Audio('./assets/audio/second.mp3');
 
   data!: Date;
   ngOnInit(): void {
-    this.audioAlarm.src = '../assets/audio/bud.mp3';
-    this.audioHours.src = '../assets/audio/probil-chas-v-nastennyih-chasah.mp3';
-    this.audioSeconds.src =
-      '../assets/audio/podnimayuschiysya-naverh-schelchok.mp3';
     this.audioSeconds.volume = 0.5;
     this.clockStart();
   }
